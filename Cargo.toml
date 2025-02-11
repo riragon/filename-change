@@ -1,0 +1,21 @@
+[package]
+name = "filename-change"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+egui = "0.24"
+eframe = "0.24"
+walkdir = "2.4"
+regex = "1.10"
+anyhow = "1.0"
+rfd = "0.11"  # ファイルダイアログ用
+rayon = "1.6"
+font-kit = "0.14"
+num_cpus = "1.13"
+
+
+# winapiの必要な機能を有効にする
+[target.'cfg(windows)'.dependencies.winapi]
+version = "0.3"
+features = ["winuser", "windef"]
