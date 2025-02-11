@@ -4,8 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-egui = "0.24"
-eframe = "0.24"
+druid = { version = "0.8.0", features = ["im"] }
 walkdir = "2.4"
 regex = "1.10"
 anyhow = "1.0"
@@ -14,8 +13,7 @@ rayon = "1.6"
 font-kit = "0.14"
 num_cpus = "1.13"
 
-
-# winapiの必要な機能を有効にする
+# winapi の必要な機能を有効にする
 [target.'cfg(windows)'.dependencies.winapi]
 version = "0.3"
 features = ["winuser", "windef"]
