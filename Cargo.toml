@@ -1,0 +1,22 @@
+[package]
+name = "filename-change"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+druid = { version = "0.8.0", features = ["im"] }
+walkdir = "2.4"
+regex = "1.10"
+anyhow = "1.0"
+rfd = "0.11"  # ファイルダイアログ用
+rayon = "1.6"
+font-kit = "0.14"
+num_cpus = "1.13"
+globset = "0.4"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# winapi の必要な機能を有効にする
+[target.'cfg(windows)'.dependencies.winapi]
+version = "0.3"
+features = ["winuser", "windef"]
